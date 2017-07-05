@@ -1,5 +1,7 @@
-#
-这个仓库研究如何使用开源技术来实现TMS(Tile Map Service)
+
+# 这个仓库研究如何使用开源技术来实现TMS(Tile Map Service)
+
+
 
 ## vector： /vector
 
@@ -65,3 +67,20 @@
 ![1/1/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_1_1.png)
 
 ## raster
+
+- gdal2tiles.py: gdal类库下提供的一个使用栅格地图生成地图瓦片的脚本
+- gdal2tiles_parallel.py: gdal2tiles.py的多进程版本
+
+
+### 思路：
+
+1. 根据瓦片的投影类型对输入栅格地图进行重投影
+2. 根据指定的最大比例尺级别，计算出该级别下的所有瓦片编码，再利用瓦片编码反算地理范围，然后使用地理范围和栅格图像的geotransform计算出栅格范围，提取出指定的范围，然后根据投影类型，重采样到256*256或512*256
+3. 对于步骤2生成的瓦片，将相邻的4个瓦片镶嵌，然后重采样到256*256，得到低级比例尺的瓦片
+4. 细节请见注释
+
+### 工作流：
+
+1. 使用gdaldem工具配置栅格图像的样式（gdal2tiles工具只支持RGB或者RGBA类型的输入）配置方法见[gdaldem彩色合成研究](http://note.youdao.com/share/?id=092866af9684899725110b81a6e57d08&type=note#/)。
+2. 使用gdal2tiles生成瓦片，细节见[gdal2tiles瓦片生产研究](http://note.youdao.com/share/?id=0e8aee9c27a99b01ff49e039cb936aeb&type=note#/)
+
