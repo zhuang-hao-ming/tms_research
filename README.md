@@ -1,9 +1,9 @@
-## 
+#
 这个仓库研究如何使用开源技术来实现TMS(Tile Map Service)
 
 ## vector： /vector
 
-- globalmaptiles.py 球面墨卡托投影和普通圆柱投影下瓦片编码和地理坐标转换类
+- globalmaptiles.py 球面墨卡托投影和普通圆柱投影下瓦片编码和地理坐标转换类（详细见注释）
 
 - vector_tile.py： 简易的*TMS*服务器，服务器支持提供*球面墨卡托投影*的瓦片和*普通圆柱投影*的瓦片（通过设置*profile*参数指定）(瓦片编码是谷歌风格的编码，原点位于左上角)。
 
@@ -31,27 +31,37 @@
 ### 球面墨卡托投影的瓦片（256px*256px）
 
 - /0/0/0 全球
+
 ![0/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator0_0_0.png)
 - /1/0/0 西北半球
+
 ![1/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_0_0.png)
 - /1/0/1 西南半球
+
 ![1/0/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_0_1.png)
 - /1/1/0 东南半球
+
 ![1/1/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_1_0.png)
 - /1/1/1 东北半球
+
 ![1/1/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_1_1.png)
 
 
 ### 地理投影的瓦片 (512px*256px)
 - /0/0/0 全球 
+
 ![0/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic0_0_0.png)
 - /1/0/0 西北半球
+
 ![1/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_0_0.png)
 - /1/0/1 西南半球
+
 ![1/0/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_0_1.png)
 - /1/1/0 东南半球
+
 ![1/1/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_1_0.png)
 - /1/1/1 东北半球
+
 ![1/1/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_1_1.png)
 
 ## raster
