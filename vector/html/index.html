@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../leaflet/leaflet.css" />
+    <script src="../leaflet/leaflet.js"></script>
+    <title>Document</title>
+    <style>
+        #map { height: 800px; }
+    </style>
+</head>
+<body>
+     <div id="map"></div>
+     <script>
+         var mymap = L.map('map').setView([51.505, -0.09], 0);
+         L.tileLayer('http://127.0.0.1:8080/{z}/{x}/{y}', {
+            
+        }).addTo(mymap);
+        // var map = L.map('map').setView([51.505, -0.09], 13);
+        // L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        //     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        // }).addTo(map);
+     </script>
+</body>
+</html>
