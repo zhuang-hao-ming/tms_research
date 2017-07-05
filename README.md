@@ -13,27 +13,27 @@ result缓存动态生成的瓦片
 
 
 - /0/0/0 
-[0/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator0_0_0.png)
+![0/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator0_0_0.png)
 - /1/0/0
-[1/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_0_0.png)
+![1/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_0_0.png)
 - /1/0/1
-[1/0/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_0_1.png)
+![1/0/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_0_1.png)
 - /1/1/0
-[1/1/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_1_0.png)
+![1/1/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_1_0.png)
 - /1/1/1
-[1/1/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_1_1.png)
+![1/1/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/mercator1_1_1.png)
 
 
 ### 地理投影的瓦片
 - /0/0/0 
-[0/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic0_0_0.png)
+![0/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic0_0_0.png)
 - /1/0/0
-[1/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_0_0.png)
+![1/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_0_0.png)
 - /1/0/1
-[1/0/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_0_1.png)
+![1/0/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_0_1.png)
 - /1/1/0
-[1/1/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_1_0.png)
+![1/1/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_1_0.png)
 - /1/1/1
-[1/1/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_1_1.png)
+![1/1/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_1_1.png)
 
 ## raster
