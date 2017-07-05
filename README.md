@@ -59,16 +59,20 @@
 - /0/0/0 全球 
 
 ![0/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic0_0_0.png)
-- /1/0/0 西北半球
+
+- /1/0/0 西南半球
 
 ![1/0/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_0_0.png)
-- /1/0/1 西南半球
+
+- /1/0/1 西北半球
 
 ![1/0/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_0_1.png)
-- /1/1/0 东北半球
+
+- /1/1/0 东南半球
 
 ![1/1/0](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_1_0.png)
-- /1/1/1 东南半球
+
+- /1/1/1 东北半球
 
 ![1/1/1](https://github.com/zhuang-hao-ming/tms_research/blob/master/doc/img/geodetic1_1_1.png)
 
