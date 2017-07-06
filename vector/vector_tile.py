@@ -8,8 +8,8 @@ from globalmaptiles import GlobalMercator, GlobalGeodetic
 from osgeo import osr
 
 
-#profile = 'mercator'
-profile = 'geodetic'
+profile = 'mercator'
+#profile = 'geodetic'
 
 if profile == 'mercator':
     map_width = 256
@@ -25,7 +25,6 @@ elif profile == 'geodetic':
 def get_map():
     m = mapnik.Map(map_width, map_height)
 
-    
     m.srs = map_srs # the output projection
 
     m.background = mapnik.Color('steelblue')
@@ -52,8 +51,38 @@ def get_map():
     m.layers.append(layer)
     return m 
 
+def get_raster_map():
+    m = mapnik.Map(map_width, map_height)
+    m.background = mapnik.Color('black')
+    m.srs = map_srs
+    s = mapnik.Style()
+    r = mapnik.Rule()
+    raster_symbolizer = mapnik.RasterSymbolizer()
+    
+    raster_symbolizer.colorizer = mapnik.RasterColorizer(mapnik.COLORIZER_LINEAR, mapnik.Color("transparent"))
+    
+    raster_symbolizer.colorizer.add_stop(0.0, mapnik.COLORIZER_LINEAR, mapnik.Color("black"))
+    raster_symbolizer.colorizer.add_stop(1.0, mapnik.COLORIZER_LINEAR, mapnik.Color("white"))
+    
+
+
+    r.symbols.append(raster_symbolizer)
+
+    s.rules.append(r)
+
+    m.append_style('raster_style', s)
+
+    lyr = mapnik.Layer('urban')
+    lyr.datasource = mapnik.Gdal(base='./ne_110m_admin_0_countries', file='urban19901.tif', band=1)
+    lyr.styles.append('raster_style')
+    m.layers.append(lyr)
+    return m
+
 PORT_NUM = 8080
-m = get_map()
+
+
+#m = get_map()
+m = get_raster_map()
 
 
 
